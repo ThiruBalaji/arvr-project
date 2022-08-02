@@ -122,6 +122,7 @@
                 <!-- Texture Image -->
 
                 <img id="texture" src="images/texture.jpg">
+		<img id="map-point" src="images/cat.jpg">
 
             </a-assets>
             
@@ -157,7 +158,11 @@
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>     
             
-            
+            <a-marker id="marker4" type='pattern' url='markers/cat-pattern-marker.patt'>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane id="img-cat" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#cat-point'></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
+            </a-marker>
             <!-- Camera -->
 
             <a-entity camera></a-entity>
