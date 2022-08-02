@@ -108,7 +108,7 @@
             
             <a-assets>
 
-                
+                <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
                 <!-- Invitation  Video -->
                 
                 <video preload="none" id="invitation" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
@@ -158,12 +158,19 @@
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>     
             
-            <a-marker id="marker4" type='pattern' url='markers/cat-pattern-marker.patt'>
+            <a-marker id="marker4" type='pattern' url='markers/cat1-pattern-marker.patt'>
                 <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
                 <a-plane id="img-cat" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#cat-point'></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>
             <!-- Camera -->
+	   <a-marker id="animated-marker" type='pattern' url='markers/cat-pattern-marker.patt'>
+            <a-entity
+                gltf-model="#animated-asset"
+                scale="2">
+            </a-entity>
+           </a-marker>
+		
 
             <a-entity camera></a-entity>
 
