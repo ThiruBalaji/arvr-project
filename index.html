@@ -163,11 +163,12 @@
                 <a-plane id="img-cat" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#cat-point'></a-plane>
             </a-marker> -->
             <!-- Camera -->
-	   <a-marker id="animated-marker" type='pattern' url='markers/cat-pattern-marker.patt'>
+	   <a-marker id="animated-marker" type='pattern' preset="custom" emitevents="true" url='markers/cat-pattern-marker.patt' cursor="fuse: false; rayOrigin: mouse;">
             <a-entity
                 gltf-model="#animated-asset"
-		preset="custom"
-		emitevents="true"
+		animation-mixer="loop: repeat"
+		class="clickable"
+		gesture-handler
                 scale="2">
             </a-entity>
            </a-marker>
